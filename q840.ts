@@ -33,4 +33,15 @@
 // Submissions
 // 82.9K
 
-function numMagicSquaresInside(grid: number[][]): number {}
+function numMagicSquaresInside(grid: number[][]): number {
+  const row = grid.length;
+  return row;
+}
+
+console.log(
+  numMagicSquaresInside([
+    [4, 3, 8, 4],
+    [9, 5, 1, 9],
+    [2, 7, 6, 2],
+  ])
+);
