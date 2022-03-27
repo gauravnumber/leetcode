@@ -49,3 +49,9 @@ function numIdenticalPairs(nums: number[]): number {
 console.log(numIdenticalPairs([1, 2, 3, 1, 1, 3]));
 console.log(numIdenticalPairs([1, 1, 1, 1]));
 console.log(numIdenticalPairs([1, 2, 3]));
+
+// Runtime: 82 ms, faster than 75.00% of TypeScript online submissions for Number of Good Pairs.
+// Memory Usage: 42.5 MB, less than 87.04% of TypeScript online submissions for Number of Good Pairs.
+// Next challenges:
+// Number of Pairs of Interchangeable Rectangles
+// Substrings That Begin and End With the Same Letter
