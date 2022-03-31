@@ -30,4 +30,19 @@
 // Submissions
 // 27.3K
 
-function minimumSum(num: number): number {}
+function minimumSum(num: number): number {
+  let sortArr: string[] = num
+    .toString()
+    .split("")
+    .map((a) => Number(a))
+    .sort((a, b) => a - b)
+    .map((a) => String(a));
+
+  let first: number = Number(sortArr[0] + sortArr[2]);
+  let second: number = Number(sortArr[1] + sortArr[3]);
+
+  return first + second;
+}
+
+console.log(minimumSum(2932));
+console.log(minimumSum(4009));
