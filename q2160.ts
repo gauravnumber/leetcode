@@ -46,3 +46,9 @@ function minimumSum(num: number): number {
 
 console.log(minimumSum(2932));
 console.log(minimumSum(4009));
+Runtime: 138 ms, faster than 6.41% of TypeScript online submissions for Minimum Sum of Four Digit Number After Splitting Digits.
+Memory Usage: 43.7 MB, less than 24.36% of TypeScript online submissions for Minimum Sum of Four Digit Number After Splitting Digits.
+Next challenges:
+Valid Square
+Max Chunks To Make Sorted
+Previous Permutation With One Swap
