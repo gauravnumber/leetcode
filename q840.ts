@@ -33,9 +33,36 @@
 // Submissions
 // 82.9K
 
+function m3x3(arr: number[][], startIndex = 0): number[][] {
+  let arr1: number[][] = arr.slice(startIndex, startIndex + 3);
+
+  arr1 = arr1.map((a: number[]) => a.slice(0, 3));
+
+  return arr1;
+}
+
+function isMagicSquare(arr: number[][]): boolean {
+  let sum: number[] = [];
+  sum[0] = arr[0]?.reduce((a, b) => a + b);
+  sum[1] = arr[1]?.reduce((a, b) => a + b);
+  sum[2] = arr[2]?.reduce((a, b) => a + b);
+  sum[3] = arr?.reduce((a: number, b: number[], i: number) => b[i] + a, 0);
+  sum[4] = arr?.reduce((a: number, b: number[], i: number) => b[2 - i] + a, 0);
+
+  return sum.every((a) => sum[0] === a);
+}
+
 function numMagicSquaresInside(grid: number[][]): number {
   const row = grid.length;
-  return row;
+  let count = 0;
+
+  for (let i = 0; i < row; i++) {
+    if (isMagicSquare(m3x3(grid, i))) {
+      count++;
+    }
+  }
+
+  return count;
 }
 
 console.log(
@@ -45,3 +72,22 @@ console.log(
     [2, 7, 6, 2],
   ])
 );
+
+console.log(numMagicSquaresInside([[8]]));
+
+// console.log(
+//   isMagicSquare([
+//     [4, 3, 8],
+//     [9, 5, 1],
+//     [2, 7, 6],
+//   ])
+// );
+
+// console.log(
+//   m3x3([
+//     [4, 3, 8, 4],
+//     [9, 5, 1, 9],
+//     [2, 7, 6, 2],
+//     [2, 7, 6, 2],
+//   ])
+// );
