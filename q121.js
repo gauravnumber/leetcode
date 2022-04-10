@@ -17,36 +17,50 @@
 //   return diff.length ? Math.max(...diff) : 0;
 // }
 
-// interface diffType {}
+// function maxProfit(prices) {
+//   let diff = {}, value, max = -Infinity
 
-// function maxProfit(prices: number[]): number {
+//   for (let i = 0, il = prices.length; i < il; i++) {
+//     let price = prices[i];
+//     diff[price] = [];
+
+//     for (let j = i + 1; j < il; j++) {
+//       diff[price].push(prices[j] - price);
+//     }
+//   }
+
+//   for (const price in diff) {
+//     if (Object.prototype.hasOwnProperty.call(diff, price)) {
+//       const element = diff[price];
+
+//       value = Math.max(...element)
+
+//       if (max < value) {
+//         max = value;
+//       }
+//     }
+//   }
+
+//   return max < 0 ? 0 : max;
+// }
+
 function maxProfit(prices) {
-  let diff = {}, value, max = -Infinity
+  let globalProfit = 0
 
-  for (let i = 0, il = prices.length; i < il; i++) {
-    let price = prices[i];
-    diff[price] = [];
+  for (let i = 0; i < prices.length; i++) {
+    for (let j = i + 1; j < prices.length; j++) {
+      const currentProfit = prices[j] - prices[i]
 
-    for (let j = i + 1; j < il; j++) {
-      diff[price].push(prices[j] - price);
+      if (currentProfit > globalProfit)
+        globalProfit = currentProfit
     }
   }
 
-  for (const price in diff) {
-    if (Object.prototype.hasOwnProperty.call(diff, price)) {
-      const element = diff[price];
-
-      value = Math.max(...element)
-
-      if (max < value) {
-        max = value;
-      }
-    }
-  }
-
-  return max < 0 ? 0 : max;
+  return globalProfit
 }
+
 
 console.log(maxProfit([7, 1, 5, 3, 6, 4])); // => 5
 console.log(maxProfit([7, 6, 5, 4, 3, 2, 1])); // => 0
 console.log(maxProfit([2, 4, 1])); // => 2
+console.log(maxProfit([1, 4, 1, 4, 3, 1])); // => 3
