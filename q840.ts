@@ -48,6 +48,9 @@ function isMagicSquare(arr: number[][]): boolean {
   sum[2] = arr[2]?.reduce((a, b) => a + b);
   sum[3] = arr?.reduce((a: number, b: number[], i: number) => b[i] + a, 0);
   sum[4] = arr?.reduce((a: number, b: number[], i: number) => b[2 - i] + a, 0);
+  sum[5] = arr?.map((a: number[]) => a[0]).reduce((a, b) => a + b);
+  sum[6] = arr?.map((a: number[]) => a[1]).reduce((a, b) => a + b);
+  sum[7] = arr?.map((a: number[]) => a[2]).reduce((a, b) => a + b);
 
   return sum.every((a) => sum[0] === a);
 }
@@ -71,17 +74,25 @@ console.log(
     [9, 5, 1, 9],
     [2, 7, 6, 2],
   ])
-);
+); // => 1
 
-console.log(numMagicSquaresInside([[8]]));
+console.log(numMagicSquaresInside([[8]])); // => 0
+
+console.log(
+  numMagicSquaresInside([
+    [2, 7, 6],
+    [1, 5, 9],
+    [4, 3, 8],
+  ])
+); // => 0
 
 // console.log(
 //   isMagicSquare([
-//     [4, 3, 8],
-//     [9, 5, 1],
 //     [2, 7, 6],
+//     [1, 5, 9],
+//     [4, 3, 8],
 //   ])
-// );
+// );  // => true
 
 // console.log(
 //   m3x3([
