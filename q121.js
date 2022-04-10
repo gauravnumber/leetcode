@@ -44,21 +44,39 @@
 //   return max < 0 ? 0 : max;
 // }
 
+//? Time limit exceed 
+// Brute Force
+// function maxProfit(prices) {
+//   let globalProfit = 0
+
+//   for (let i = 0; i < prices.length; i++) {
+//     for (let j = i + 1; j < prices.length; j++) {
+//       const currentProfit = prices[j] - prices[i]
+
+//       if (currentProfit > globalProfit)
+//         globalProfit = currentProfit
+//     }
+//   }
+
+//   return globalProfit
+// }
+
 function maxProfit(prices) {
-  let globalProfit = 0
+  let l = 0, r = 1, maxP = 0, profit
 
-  for (let i = 0; i < prices.length; i++) {
-    for (let j = i + 1; j < prices.length; j++) {
-      const currentProfit = prices[j] - prices[i]
-
-      if (currentProfit > globalProfit)
-        globalProfit = currentProfit
+  while (r < prices.length) {
+    if (prices[l] < prices[r]) {
+      profit = prices[r] - prices[l]
+      maxP = Math.max(maxP, profit)
+    } else {
+      l = r
     }
+
+    r++
   }
 
-  return globalProfit
+  return maxP
 }
-
 
 console.log(maxProfit([7, 1, 5, 3, 6, 4])); // => 5
 console.log(maxProfit([7, 6, 5, 4, 3, 2, 1])); // => 0
