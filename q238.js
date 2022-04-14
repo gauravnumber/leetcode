@@ -35,10 +35,28 @@
  * @param {number[]} nums
  * @return {number[]}
  */
+// var productExceptSelf = function (nums) {
+//   return nums.map((v, i, arr) => {
+//     return arr.filter((v, ai) => ai !== i).reduce((a, b) => a * b, 1)
+//   })
+// };
+
 var productExceptSelf = function (nums) {
-  return nums.map((v, i, arr) => {
-    return arr.filter((v, ai) => ai !== i).reduce((a, b) => a * b, 1)
-  })
+  let res = nums.slice(), postfix = 1
+
+  for (let i = 1; i < nums.length; i++) {
+    res[i] *= res[i - 1]
+  }
+
+  for (let i = nums.length - 1; i >= 0; i--) {
+    res[i] = postfix
+    res[i] *= res[i - 1]
+    postfix *= nums[i]
+  }
+
+  res[0] = postfix
+
+  return res
 };
 
 console.log(productExceptSelf([1, 2, 3, 4]))  // => [24,12,8,6]
