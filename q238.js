@@ -62,3 +62,11 @@ var productExceptSelf = function (nums) {
 console.log(productExceptSelf([1, 2, 3, 4]))  // => [24,12,8,6]
 console.log(productExceptSelf([-1, 1, 0, -3, 3]))  // => [0,0,9,0,0]
 console.log(productExceptSelf([0, 0]))  // => [0,0]
+
+// Runtime: 107 ms, faster than 85.82% of JavaScript online submissions for Product of Array Except Self.
+// Memory Usage: 56.1 MB, less than 21.44% of JavaScript online submissions for Product of Array Except Self.
+// Next challenges:
+// Trapping Rain Water
+// Maximum Product Subarray
+// Paint House II
+// Minimum Difference in Sums After Removal of Elements
