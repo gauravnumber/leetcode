@@ -48,7 +48,7 @@ var productExceptSelf = function (nums) {
     res[i] *= res[i - 1]
   }
 
-  for (let i = nums.length - 1; i >= 0; i--) {
+  for (let i = nums.length - 1; i > 0; i--) {
     res[i] = postfix
     res[i] *= res[i - 1]
     postfix *= nums[i]

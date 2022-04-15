@@ -13,5 +13,5 @@ class Solution:
         stack.append(int(op))
     return sum(stack)
 
-s = Solution()
-print(s.calPoints(["1", "3", "+"]))
+# s = Solution()
+# print(s.calPoints(["1", "3", "+"]))
