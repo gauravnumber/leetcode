@@ -55,3 +55,12 @@ var maxSubArray = function (nums) {
 console.log(maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4])) // => 6
 console.log(maxSubArray([1])) // => 1
 console.log(maxSubArray([5, 4, -1, 7, 8])) // => 23
+
+// Runtime: 85 ms, faster than 82.29% of JavaScript online submissions for Maximum Subarray.
+// Memory Usage: 50.6 MB, less than 39.81% of JavaScript online submissions for Maximum Subarray.
+// Next challenges:
+// Maximum Product Subarray
+// Degree of an Array
+// Longest Turbulent Subarray
+// Maximum Absolute Sum of Any Subarray
+// Maximum Subarray Sum After One Operation
