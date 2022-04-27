@@ -3,11 +3,12 @@ function findMin(nums) {
 
   while (l <= r) {
     if (nums[l] < nums[r]) {
-      res = nums[l]
+      res = Math.min(nums[l], res)
       break
     }
 
     m = Math.floor((l + r) / 2)
+    res = Math.min(res, nums[m])
 
     if (nums[m] >= nums[l]) {
       l = m + 1
