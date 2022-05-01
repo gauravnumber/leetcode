@@ -34,3 +34,4 @@ function threeSum(nums) {
 console.log(threeSum([-1, 0, 1, 2, -1, -4]))  // => [ [ -1, -1, 2 ], [ -1, 0, 1 ] ]
 console.log(threeSum([])) // => []
 console.log(threeSum([0])) // => []
+console.log(threeSum([9, 1, 6, -2, 3, -5, 7, -10])) // => [ [ -10, 1, 9 ], [ -10, 3, 7 ], [ -5, -2, 7 ] ]
