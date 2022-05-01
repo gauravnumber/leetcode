@@ -34,3 +34,10 @@ function threeSum(nums) {
 console.log(threeSum([-1, 0, 1, 2, -1, -4]))  // => [ [ -1, -1, 2 ], [ -1, 0, 1 ] ]
 console.log(threeSum([])) // => []
 console.log(threeSum([0])) // => []
+
+// Runtime: 250 ms, faster than 35.05% of JavaScript online submissions for 3Sum.
+// Memory Usage: 52 MB, less than 88.91% of JavaScript online submissions for 3Sum.
+// Next challenges:
+// 3Sum Closest
+// 4Sum
+// 3Sum Smaller

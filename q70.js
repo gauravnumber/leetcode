@@ -11,3 +11,6 @@ const climbStairs = n => {
 
 console.log(climbStairs(2))
 console.log(climbStairs(5))
+
+// Runtime: 85 ms, faster than 33.45% of JavaScript online submissions for Climbing Stairs.
+// Memory Usage: 42.1 MB, less than 38.93% of JavaScript online submissions for Climbing Stairs.
