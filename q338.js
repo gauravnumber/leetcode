@@ -26,5 +26,5 @@ const countBits = n => {
 //   return dp
 // }
 
-console.log(countBits(2))
-console.log(countBits(5))
+console.log(countBits(2)) // => [0,1,1]
+console.log(countBits(5)) // => [0,1,1,2,1,2]
