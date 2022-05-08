@@ -10,8 +10,6 @@ const numDecodings = (s) => {
       dp[i] = 0
     } else {
       dp[i] = dp[i + 1]
-      // console.log(`dp`, dp)
-
     }
 
     if (i + 1 < s.length && (s[i] == "1" || s[i] == "2" && /[0123456]/.test(s + 1))) {
