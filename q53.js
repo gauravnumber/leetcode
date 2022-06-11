@@ -38,19 +38,39 @@
  * @param {number[]} nums
  * @return {number}
  */
-var maxSubArray = function (nums) {
-  let maxSub = nums[0], curSum = 0
+// var maxSubArray = function (nums) {
+//   let maxSub = nums[0], curSum = 0
 
-  for (let i = 0; i < nums.length; i++) {
-    if (curSum < 0) curSum = 0
+//   for (let i = 0; i < nums.length; i++) {
+//     if (curSum < 0) curSum = 0
 
-    curSum += nums[i]
-    maxSub = Math.max(maxSub, curSum)
-  }
+//     curSum += nums[i]
+//     maxSub = Math.max(maxSub, curSum)
+//   }
 
-  return maxSub
+//   return maxSub
+// };
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+//Lets use two pointer approach
+var maxSubArray = function(nums) {
+        let global_max = Number.MIN_SAFE_INTEGER;
+        let local_max=0;
+    
+        for(let i=0; i<nums.length; i++){
+            local_max=Math.max(nums[i], local_max+nums[i]);
+            if(local_max>global_max){
+                global_max = local_max
+            }
+            if(local_max<0){
+                local_max=0
+            }
+        }
+    return global_max
 };
-
 
 console.log(maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4])) // => 6
 console.log(maxSubArray([1])) // => 1
