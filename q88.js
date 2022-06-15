@@ -23,23 +23,24 @@
 //   console.log(nums1)
 // };
 
-var merge = function(nums1, m, nums2, n) {
-   let i = m + n - 1
-   m--; n--
-    
-    while (n >= 0) {
-        if (nums1[m] > nums2[n]) {
-            nums1[i] = nums1[m]
-            m--
-        } else {
-            nums1[i] = nums2[n]
-            n--
-        }
-        
-        i--
+var merge = function (nums1, m, nums2, n) {
+  let i = m + n - 1;
+  m--;
+  n--;
+
+  while (n >= 0) {
+    if (nums1[m] > nums2[n]) {
+      nums1[i] = nums1[m];
+      m--;
+    } else {
+      nums1[i] = nums2[n];
+      n--;
     }
 
-  console.log(nums1)
+    i--;
+  }
+
+  console.log(nums1);
 };
 
-merge([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3)  // =>  [1,2,2,3,5,6]
+merge([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3); // =>  [1,2,2,3,5,6]

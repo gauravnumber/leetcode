@@ -44,7 +44,7 @@
 //   return max < 0 ? 0 : max;
 // }
 
-//? Time limit exceed 
+//? Time limit exceed
 // Brute Force
 // function maxProfit(prices) {
 //   let globalProfit = 0
@@ -62,20 +62,23 @@
 // }
 
 function maxProfit(prices) {
-  let l = 0, r = 1, maxP = 0, profit
+  let l = 0,
+    r = 1,
+    maxP = 0,
+    profit;
 
   while (r < prices.length) {
     if (prices[l] < prices[r]) {
-      profit = prices[r] - prices[l]
-      maxP = Math.max(maxP, profit)
+      profit = prices[r] - prices[l];
+      maxP = Math.max(maxP, profit);
     } else {
-      l = r
+      l = r;
     }
 
-    r++
+    r++;
   }
 
-  return maxP
+  return maxP;
 }
 
 console.log(maxProfit([7, 1, 5, 3, 6, 4])); // => 5

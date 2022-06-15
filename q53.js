@@ -5,8 +5,6 @@
 
 // A subarray is a contiguous part of an array.
 
-
-
 // Example 1:
 
 // Input: nums = [-2,1,-3,4,-1,2,1,-5,4]
@@ -23,14 +21,10 @@
 // Input: nums = [5,4,-1,7,8]
 // Output: 23
 
-
-
 // Constraints:
 
 //     1 <= nums.length <= 105
 //     -104 <= nums[i] <= 104
-
-
 
 // Follow up: If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
 
@@ -56,25 +50,25 @@
  * @return {number}
  */
 //Lets use two pointer approach
-var maxSubArray = function(nums) {
-        let global_max = Number.MIN_SAFE_INTEGER;
-        let local_max=0;
-    
-        for(let i=0; i<nums.length; i++){
-            local_max=Math.max(nums[i], local_max+nums[i]);
-            if(local_max>global_max){
-                global_max = local_max
-            }
-            if(local_max<0){
-                local_max=0
-            }
-        }
-    return global_max
+var maxSubArray = function (nums) {
+  let global_max = Number.MIN_SAFE_INTEGER;
+  let local_max = 0;
+
+  for (let i = 0; i < nums.length; i++) {
+    local_max = Math.max(nums[i], local_max + nums[i]);
+    if (local_max > global_max) {
+      global_max = local_max;
+    }
+    if (local_max < 0) {
+      local_max = 0;
+    }
+  }
+  return global_max;
 };
 
-console.log(maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4])) // => 6
-console.log(maxSubArray([1])) // => 1
-console.log(maxSubArray([5, 4, -1, 7, 8])) // => 23
+console.log(maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4])); // => 6
+console.log(maxSubArray([1])); // => 1
+console.log(maxSubArray([5, 4, -1, 7, 8])); // => 23
 
 // Runtime: 85 ms, faster than 82.29% of JavaScript online submissions for Maximum Subarray.
 // Memory Usage: 50.6 MB, less than 39.81% of JavaScript online submissions for Maximum Subarray.

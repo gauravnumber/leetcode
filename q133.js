@@ -6,37 +6,42 @@
 // }
 
 function Node(val, neighbors) {
-  this.val = val === undefined ? 0 : val
-  this.neighbors = neighbors === undefined ? [] : neighbors
+  this.val = val === undefined ? 0 : val;
+  this.neighbors = neighbors === undefined ? [] : neighbors;
   // console.log(`val`, val)
 }
 
-const cloneGraph = node => {
-  let oldToNew = {}
+const cloneGraph = (node) => {
+  let oldToNew = {};
 
-  console.log(node)
+  console.log(node);
 
-  const dfs = node => {
-    if (node in oldToNew) return oldToNew[node]
+  const dfs = (node) => {
+    if (node in oldToNew) return oldToNew[node];
 
     // copy = new Node(node.val)
-    copy = Node(node.val)
-    oldToNew[node] = copy
+    copy = Node(node.val);
+    oldToNew[node] = copy;
 
     for (let nei = 0; nei < node.neighbors; nei++) {
-      copy.neighbors.push(dfs(nei))
+      copy.neighbors.push(dfs(nei));
     }
 
-    return copy
-  }
+    return copy;
+  };
 
-  console.log(`node`, node)
+  console.log(`node`, node);
 
-  return node ? dfs(node) : null
-}
+  return node ? dfs(node) : null;
+};
 
-let n = Node([[2, 4], [1, 3], [2, 4], [1, 3]])
+let n = Node([
+  [2, 4],
+  [1, 3],
+  [2, 4],
+  [1, 3],
+]);
 // console.log(`n.val`, n.val)
 
-console.log(cloneGraph(n))
+console.log(cloneGraph(n));
 // console.log(cloneGraph([[2, 4], [1, 3], [2, 4], [1, 3]]))

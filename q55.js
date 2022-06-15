@@ -1,13 +1,13 @@
-const canJump = nums => {
-  let goal = nums.length - 1
+const canJump = (nums) => {
+  let goal = nums.length - 1;
 
   for (let i = nums.length - 1; i > -1; i--) {
     if (i + nums[i] >= goal) {
-      goal = i
+      goal = i;
     }
   }
 
-  return goal === 0
-}
+  return goal === 0;
+};
 
-console.log(canJump([2, 3, 1, 1, 4]))
+console.log(canJump([2, 3, 1, 1, 4]));

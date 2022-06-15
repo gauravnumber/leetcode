@@ -1,9 +1,10 @@
 function twosum(nums, target) {
-  let hashtable = {}, currentElement,
-    difference
+  let hashtable = {},
+    currentElement,
+    difference;
 
   for (let i = 0; i < nums.length; i++) {
-    currentElement = nums[i]
+    currentElement = nums[i];
     difference = target - currentElement;
 
     if (hashtable[currentElement]) {
@@ -13,8 +14,8 @@ function twosum(nums, target) {
     }
   }
 
-  return -1
+  return -1;
 }
 
 // console.log(twosum([1, 2, 3, 7, 5], 12))
-console.log(twosum([1, 2, 3, 4, 5], 6))
+console.log(twosum([1, 2, 3, 4, 5], 6));

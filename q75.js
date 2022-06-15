@@ -45,26 +45,26 @@
  * @param {number[]} nums
  * @return {void} Do not return anything, modify nums in-place instead.
  */
-var sortColors = function(nums) {
-    let red, white, blue
-    red = white = 0
-    blue = nums.length - 1
-    
-    while (white <= blue) {
-        if (nums[white] === 0) {
-            [nums[red], nums[white]] = [nums[white], nums[red]]
-            white++
-            red++
-        } else if (nums[white] === 1) {
-            white++
-        } else {
-            [nums[blue], nums[white]] = [nums[white], nums[blue]]
-            blue--
-        }
-    }
+var sortColors = function (nums) {
+  let red, white, blue;
+  red = white = 0;
+  blue = nums.length - 1;
 
-    console.log(nums)
+  while (white <= blue) {
+    if (nums[white] === 0) {
+      [nums[red], nums[white]] = [nums[white], nums[red]];
+      white++;
+      red++;
+    } else if (nums[white] === 1) {
+      white++;
+    } else {
+      [nums[blue], nums[white]] = [nums[white], nums[blue]];
+      blue--;
+    }
+  }
+
+  console.log(nums);
 };
 
-sortColors([2, 0, 2, 1, 1, 0])  // => [0,0,1,1,2,2]
-sortColors([2, 0, 1])  // => [0, 1, 2]
+sortColors([2, 0, 2, 1, 1, 0]); // => [0,0,1,1,2,2]
+sortColors([2, 0, 1]); // => [0, 1, 2]

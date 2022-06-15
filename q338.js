@@ -1,12 +1,11 @@
-const countBits = n => {
-  let mem = Array.from(Array(n + 1))
-  mem[0] = 0
+const countBits = (n) => {
+  let mem = Array.from(Array(n + 1));
+  mem[0] = 0;
 
-  for (let i = 1; i <= n; i++)
-    mem[i] = mem[Math.floor(i / 2)] + i % 2
+  for (let i = 1; i <= n; i++) mem[i] = mem[Math.floor(i / 2)] + (i % 2);
 
-  return mem
-}
+  return mem;
+};
 
 // function countBits(n) {
 //   let dp, offset = 1
@@ -26,5 +25,5 @@ const countBits = n => {
 //   return dp
 // }
 
-console.log(countBits(2)) // => [0,1,1]
-console.log(countBits(5)) // => [0,1,1,2,1,2]
+console.log(countBits(2)); // => [0,1,1]
+console.log(countBits(5)); // => [0,1,1,2,1,2]
