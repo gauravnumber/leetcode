@@ -50,11 +50,11 @@ console.log(
     "alice and bob love leetcode",
     "i think so too",
     "this is great thanks very much",
-  ])
+  ]),
 );
 
 console.log(
-  mostWordsFound(["please wait", "continue to fight", "continue to win"])
+  mostWordsFound(["please wait", "continue to fight", "continue to win"]),
 );
 
 // Runtime: 60 ms, faster than 100.00% of TypeScript online submissions for Maximum Number of Words Found in Sentences.

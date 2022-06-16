@@ -62,7 +62,7 @@ console.log(
   maximumWealth([
     [1, 2, 3],
     [3, 2, 1],
-  ])
+  ]),
 );
 
 // Runtime: 112 ms, faster than 27.25% of TypeScript online submissions for Richest Customer Wealth.

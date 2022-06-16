@@ -7,7 +7,7 @@ function isPalindrome(x: number): boolean {
 
   while (n) {
     rem = Math.floor(n % 10);
-    n = Math.floor((n /= 10));
+    n = Math.floor(n /= 10);
     sum = sum * 10 + rem;
   }
 
