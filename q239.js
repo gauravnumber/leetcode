@@ -1,11 +1,18 @@
-const maxSlidingWindow = (nums, k) => {
-  let output = [],
-    q = [],
-    l = 0,
-    r = 0;
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number[]}
+ */
+var maxSlidingWindow = function (nums, k) {
+  let output = [];
+  let q = [];
+  let l, r;
+  l = r = 0;
 
   while (r < nums.length) {
-    while (q && nums[q.at(-1)] < nums[r]) q.pop();
+    while (q && nums[q.at(-1)] < nums[r]) {
+      q.pop();
+    }
 
     q.push(r);
 
@@ -21,7 +28,3 @@ const maxSlidingWindow = (nums, k) => {
 
   return output;
 };
-
-console.log(maxSlidingWindow([1, 3, -1, -3, 5, 3, 6, 7], 3));
-console.log(maxSlidingWindow([1, 2, 3, 4], 2));
-console.log(maxSlidingWindow([8, 7, 6, 9], 2));
