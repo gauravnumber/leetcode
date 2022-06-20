@@ -14,4 +14,10 @@ public class Solution {
         }
         return dp[0][s.length()-1];
     }
+
+    public static void main(String[] args) {
+        Solution s = new Solution();
+        System.out.println(s.longestPalindromeSubseq("bbbab"));
+        System.out.println(s.longestPalindromeSubseq("cbbd"));
+    }
 }
