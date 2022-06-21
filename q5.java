@@ -13,6 +13,8 @@ class Solution {
 			if (len > end - start) {
 				start = i - ((len - 1) / 2);
 				end = i + (len / 2);
+				System.out.println("start : " + start);
+				System.out.println("end : " + end);
 			}
 		}
 
@@ -32,9 +34,8 @@ class Solution {
 
 	public static void main(String[] args) {
 		Solution s = new Solution();
-		String str = s.longestPalindrome("babad");
 
-		System.out.println(str);
+		// System.out.println(s.longestPalindrome("babad"));
 		System.out.println(s.longestPalindrome("cbbd"));
 	}
 }

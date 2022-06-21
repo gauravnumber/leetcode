@@ -12,12 +12,20 @@ public class Solution {
                 }
             }
         }
+
+        for(int i = 0; i < s.length(); i++) {
+            for (int j = 0; j < s.length(); j++) {
+                System.out.print(dp[i][j]);
+            }
+            
+            System.out.println("");
+        }
         return dp[0][s.length()-1];
     }
 
     public static void main(String[] args) {
         Solution s = new Solution();
-        System.out.println(s.longestPalindromeSubseq("bbbab"));
+        // System.out.println(s.longestPalindromeSubseq("bbbab"));
         System.out.println(s.longestPalindromeSubseq("cbbd"));
     }
 }
