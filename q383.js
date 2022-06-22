@@ -16,14 +16,14 @@ var canConstruct = function (ransomNote, magazine) {
   }
 
   for (let c in countRansom) {
-    if (!(count[c] > 0 && countRansom[c] > 0)) return false;
-    // if (count[c] !== countRansom[c]) return false
+    if (!count.hasOwnProperty(c) || count[c] < countRansom[c]) return false;
   }
 
   return true;
 };
 
-canConstruct("aa", "ab");
+console.log(canConstruct("aa", "ab")); // => false
+console.log(canConstruct("aa", "aab")); // => true
 console.log(
   canConstruct("bg", "efjbdfbdgfjhhaiigfhbaejahgfbbgbjagbddfgdiaigdadhcfcj"),
-);
+); // => true
