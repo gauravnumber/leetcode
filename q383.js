@@ -22,6 +22,21 @@ var canConstruct = function (ransomNote, magazine) {
   return true;
 };
 
+// var canConstruct = function (ransomNote, magazine) {
+//   magazine = [...magazine];
+
+//   for (const letter of ransomNote) {
+//     const index = magazine.indexOf(letter);
+
+//     if (index < 0) {
+//       return false;
+//     }
+//     magazine[index] = null;
+//   }
+
+//   return true;
+// };
+
 console.log(canConstruct("aa", "ab")); // => false
 console.log(canConstruct("aa", "aab")); // => true
 console.log(
