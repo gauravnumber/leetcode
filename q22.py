@@ -6,4 +6,6 @@ class Solution:
             if not right:    parens += p,
             return parens
         return generate('', n, n)
-        
+
+s = Solution()
+print(s.generateParenthesis(3)) # ['((()))', '(()())', '(())()', '()(())', '()()()']
