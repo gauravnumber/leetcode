@@ -1,5 +1,7 @@
 from typing import List
-
+# Approach 1: Cascading
+# Time Complexity: O(N * 2^N)
+# Space Complexity: O(N * 2^N)
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
         n = len(nums)
