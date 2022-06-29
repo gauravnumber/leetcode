@@ -31,8 +31,8 @@ class Solution {
 };
 
 int main() {
-    Solution s = new Solution();
-    vector<vector<int>> &v = s.subsetsWithDup({1,2,2});
+    Solution s;
+    vector < vector < int > > &v = s.subsetsWithDup({1,2,2});
     cout<<v.size();
     return 0;
 }

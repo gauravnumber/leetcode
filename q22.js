@@ -15,4 +15,4 @@ const generateParenthesis = (n) => {
   return res;
 };
 
-console.log(generateParenthesis(3)) // => [ '((()))', '(()())', '(())()', '()(())', '()()()' ]
+console.log(generateParenthesis(3)); // => [ '((()))', '(()())', '(())()', '()(())', '()()()' ]
