@@ -4,7 +4,6 @@ from typing import List
 # Space Complexity: O(N * 2^N)
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
-        n = len(nums)
         output = [[]]
         
         for num in nums:
