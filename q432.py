@@ -118,3 +118,13 @@ class AllOne(object):
         :rtype: str
         """
         return self.dll.get_head().get_any_key() if self.dll.get_tail().count() > 0 else ""
+
+
+s = AllOne()
+s.inc("hello")
+s.inc("hello")
+print(s.getMaxKey())
+print(s.getMinKey())
+s.inc("leet")
+print(s.getMaxKey())
+print(s.getMinKey())
