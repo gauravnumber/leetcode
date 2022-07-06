@@ -9,11 +9,13 @@ var findMedianSortedArrays = function (nums1, nums2) {
   nums.sort((a, b) => a - b);
 
   if (n % 2 !== 0) {
-    return nums[Math.floor(n / 2)];
+    return nums[Math.floor(n >> 1)];
   }
 
-  return (nums[n / 2] + nums[n / 2 - 1]) / 2;
+  return (nums[n >> 1] + nums[(n >> 1) - 1]) / 2;
 };
+
+// n >> 1 === n / 2
 
 console.log(
   findMedianSortedArrays(
