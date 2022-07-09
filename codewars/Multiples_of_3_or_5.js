@@ -25,7 +25,7 @@ function solution(number) {
   let arr = helper(number - 1);
 
   // return arr ? arr.reduce((a, b) => a + b) : 0
-  return arr.reduce((a, b) => a + b)
+  return arr.reduce((a, b) => a + b);
 }
 
 console.log(solution(10)); // 23
