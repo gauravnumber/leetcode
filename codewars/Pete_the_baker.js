@@ -1,8 +1,5 @@
 function cakes(recipe, available) {
-  let 
-  i = Infinity;
-  // i = Math.MAX_NUMBER_SAFE,
-  // max = 0;
+  let i = Infinity;
 
   for (let ingredient in recipe) {
     if (available.hasOwnProperty(ingredient)) {
